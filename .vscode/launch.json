@@ -7,8 +7,8 @@
       "request": "launch",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev"],
-      "args": ["apps/api/src/index.ts"],
-      "cwd": "${workspaceFolder}",
+      "args": ["src/index.ts"],
+      "cwd": "${workspaceFolder}/apps/api",
       "console": "integratedTerminal",
       "restart": true,
       "envFile": "${workspaceFolder}/apps/api/.env"
