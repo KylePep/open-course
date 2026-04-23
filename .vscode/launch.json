@@ -20,6 +20,15 @@
       "port": 9229,
       "restart": true,
       "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "name": "Start Frontend",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "cwd": "${workspaceFolder}/apps/web",
+      "console": "integratedTerminal"
     }
   ]
 }
