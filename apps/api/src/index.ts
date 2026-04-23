@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+import { db } from "./db.js";
 
 dotenv.config();
 
@@ -13,6 +14,11 @@ app.use(express.json());
 app.get("/health", (req, res) => {
   res.json({ status: "ok" });
 });
+
+app.get("/test-db", async (req, res) => {
+  const courses = await db.course.findMany();
+  res.json(courses)
+})
 
 const PORT = process.env.PORT || 3000;
 
