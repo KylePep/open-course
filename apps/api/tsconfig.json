@@ -1,4 +1,5 @@
 {
+  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
@@ -22,5 +23,6 @@
     "moduleDetection": "force",
 
     "skipLibCheck": true
-  }
+  },
+  "include": ["src", "../../packages/shared/src"]
 }
